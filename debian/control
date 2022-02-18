@@ -1,0 +1,23 @@
+Source: mmv
+Maintainer: Rhonda D'Vine <rhonda@debian.org>
+Uploaders: Axel Beckert <abe@debian.org>
+Section: utils
+Priority: optional
+Standards-Version: 4.4.1
+Build-Depends: debhelper (>= 12),
+               dpkg-dev (>= 1.16.1~),
+               pkg-config (>= 0.29),
+               libgc-dev,
+               help2man (>= 1.29)
+Vcs-Git: https://github.com/rrthomas/mmv.git
+Vcs-Browser: https://github.com/rrthomas/mmv
+
+Package: mmv
+Architecture: any
+Description: Move/Copy/Link multiple files and directories
+ mmv is a program to move/copy/link multiple files and directories
+ according to a set of wildcard patterns. This multiple action is
+ performed without any unexpected deletions due to collisions of
+ target names with existing filenames or with other target names.
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
