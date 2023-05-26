@@ -12,11 +12,16 @@
 /configure
 /cmdline.c
 /cmdline.h
+/dummy.c
+/dummy.vala
 /lib
 /m4
 /mcp
 /mln
 /mmv
+/mmv.exe
+/mmv.c
 /mmv.1
+/mmv_vala.stamp
 /mmv-*.tar.gz
 /stamp-h1

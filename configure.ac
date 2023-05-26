@@ -31,16 +31,13 @@ gl_EARLY
 AM_PROG_AR
 AC_PROG_LN_S
 AC_USE_SYSTEM_EXTENSIONS
-gl_INIT
 
-dnl libgc (BDW garbage collector)
-PKG_CHECK_MODULES([BDW_GC],[bdw-gc >= 7.2])
-AH_BOTTOM([
-#define malloc GC_malloc
-#define realloc GC_realloc
-#define free GC_free
-#define strdup GC_strdup
-])
+# Vala
+AM_PROG_VALAC(0.56,,[AC_MSG_WARN([valac not found or too old: cannot compile Vala sources])])
+PKG_CHECK_MODULES(GLIB, [glib-2.0 gobject-2.0 gio-2.0 gee-0.8])
+
+# Initialize gnulib
+gl_INIT
 
 dnl Extra warnings with GCC
 AC_ARG_ENABLE([gcc-warnings],
